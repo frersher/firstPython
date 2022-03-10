@@ -207,14 +207,37 @@ print("当文件指针的位置 %s" %file6.tell())
 print("当前读取到第一个字符，字符内容是 %s" %file6.read(1))
 
 # 第一个参数代表偏移位置，第二个参数 0 表示从文件开头偏移 1表示从当前位置偏移 2从文件结尾
-file6.seek(5,0)
-print("进行了seek操作")
-print("当前文件指针的位置 %s" %file6.tell())
-print("当前读取到第一个字符，字符内容是 %s" %file6.read(1))
-print("当文件指针的位置 %s" %file6.tell())
-file6.close()
+# file6.seek(5,0)
+# print("进行了seek操作")
+# print("当前文件指针的位置 %s" %file6.tell())
+# print("当前读取到第一个字符，字符内容是 %s" %file6.read(1))
+# print("当文件指针的位置 %s" %file6.tell())
+# file6.close()
+
+# try:
+#     year = int(input('input year:'))
+# except ValueError:
+#     print('年份要输入数字')
 
 
 
+# except (ValueError,AttributeError,KeyError)
+
+# try:
+#     print(1/0)
+# except ZeroDivisionError as e:
+#     print('0不能作为除数 %s' %e)
 
 
+
+# try:
+#     raise  NameError('helloError')
+# except NameError as e:
+#     print(e)
+#
+# try:
+#     a = open('name1.txt')
+# except Exception as e:
+#     print(e)
+# finally:
+#     a.close()
