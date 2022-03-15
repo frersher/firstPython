@@ -135,24 +135,38 @@
 
 
 # 装饰器升级
-def new_tips(argv):
-    def tips(func):
-        def nei(a,b):
-            print("start %s %s" %(argv,func.__name__))
-            func(a,b)
-            print("stop %s" %argv)
+# def new_tips(argv):
+#     def tips(func):
+#         def nei(a,b):
+#             print("start %s %s" %(argv,func.__name__))
+#             func(a,b)
+#             print("stop %s" %argv)
+#
+#         return nei
+#     return tips
+#
+#
+# @new_tips("add")
+# def add(a,b):
+#     print(a+b)
+#
+# @new_tips("sub")
+# def sub(a,b):
+#     print(a-b)
+#
+# print(add(1,2))
+# print(sub(9,5))
 
-        return nei
-    return tips
 
+# 上下文管理器
+fd = open('name.txt')
+try:
+    for line in fd:
+        print(line)
+finally:
+    fd.close()
 
-@new_tips("add")
-def add(a,b):
-    print(a+b)
-
-@new_tips("sub")
-def sub(a,b):
-    print(a-b)
-
-print(add(1,2))
-print(sub(9,5))
+# 使用with就不需要使用finally了，with就是上下文管理器
+with open('name.txt') as f:
+    for line in f:
+        print(line)
