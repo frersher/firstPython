@@ -77,17 +77,58 @@
 # print(num1(1))
 
 
-def counter():
-    cnt = [0]
-    def add_one():
-        cnt[0] += 1
-        return cnt[0]
+# def counter():
+#     cnt = [0]
+#     def add_one():
+#         cnt[0] += 1
+#         return cnt[0]
+#
+#     return add_one
+#
+# num1 =  counter(5)
+#
+# print(num1())
+# print(num1())
+# print(num1())
+# print(num1())
 
-    return add_one
 
-num1 =  counter(5)
+# 装饰器定义
 
-print(num1())
-print(num1())
-print(num1())
-print(num1())
+# import time
+#
+# def timer(func):
+#     def wrapper():
+#         start_time = time.time()
+#         func()
+#         stop_time = time.time()
+#         print('函数运行了 %s s' % (stop_time - start_time))
+#     return wrapper
+#
+#
+# @timer
+# def i_can_sleep():
+#     time.sleep(3)
+#
+# i_can_sleep()
+
+
+def tips(func):
+    def nei(a,b):
+        print("start")
+        func(a,b)
+        print("stop")
+
+    return nei
+
+
+@tips
+def add(a,b):
+    print(a+b)
+
+@tips
+def sub(a,b):
+    print(a-b)
+
+print(add(1,2))
+print(sub(9,5))
