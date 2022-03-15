@@ -113,20 +113,44 @@
 # i_can_sleep()
 
 
-def tips(func):
-    def nei(a,b):
-        print("start")
-        func(a,b)
-        print("stop")
+# def tips(func):
+#     def nei(a,b):
+#         print("start")
+#         func(a,b)
+#         print("stop")
+#
+#     return nei
+#
+#
+# @tips
+# def add(a,b):
+#     print(a+b)
+#
+# @tips
+# def sub(a,b):
+#     print(a-b)
+#
+# print(add(1,2))
+# print(sub(9,5))
 
-    return nei
+
+# 装饰器升级
+def new_tips(argv):
+    def tips(func):
+        def nei(a,b):
+            print("start %s %s" %(argv,func.__name__))
+            func(a,b)
+            print("stop %s" %argv)
+
+        return nei
+    return tips
 
 
-@tips
+@new_tips("add")
 def add(a,b):
     print(a+b)
 
-@tips
+@new_tips("sub")
 def sub(a,b):
     print(a-b)
 
