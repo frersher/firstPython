@@ -13,9 +13,13 @@ class Player():  # 定义一个类
     def __init__(self, name, hp):
         self.name = name
         self.hp = hp
-
     def print_role(self):
         print("name is %s,hp is %s" %(self.name, self.hp))
+
+
+class Monster():
+    '定义怪物的类'
+    pass
 
 
 user1 = Player('tom', 100)  # 类的实例化
