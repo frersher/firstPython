@@ -10,11 +10,16 @@
 
 # 面向过程更符合机器，面向对象更符合人的思维
 class Player():  # 定义一个类
-    def __init__(self, name, hp):
-        self.name = name
+    def __init__(self, name, hp, occu):
+        self.__name = name
         self.hp = hp
+        self.occu = occu
+
     def print_role(self):
-        print("name is %s,hp is %s" %(self.name, self.hp))
+        print("name is %s,hp is %s, occu is %s" % (self.__name, self.hp, self.occu))
+
+    def updateName(self,newname):
+        self.__name = newname
 
 
 class Monster():
@@ -22,7 +27,14 @@ class Monster():
     pass
 
 
-user1 = Player('tom', 100)  # 类的实例化
-user2 = Player('jerry', 90)
+user1 = Player('tom', 100, 'war')  # 类的实例化
+user2 = Player('jerry', 90, 'master')
 user1.print_role()
 user2.print_role()
+
+# 通过修改名称方法
+user1.updateName('zhangs')
+user1.print_role()
+# 如果变量用__修饰则为私有的
+user1.name = 'lis'
+user1.print_role()
