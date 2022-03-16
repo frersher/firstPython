@@ -1,4 +1,4 @@
-# 类与实例
+# 35 类与实例
 # user1 = {"name": "tom", "hp": 100}
 # user2 = {"name": "jerry", "hp": 80}
 #
@@ -8,6 +8,7 @@
 #
 # print_role(user1)
 
+# 面向过程更符合机器，面向对象更符合人的思维
 class Player():  # 定义一个类
     def __init__(self, name, hp):
         self.name = name
