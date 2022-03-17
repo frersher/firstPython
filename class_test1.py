@@ -57,6 +57,12 @@ print(a3.hp)
 print(a3.whomi())
 
 
+print('a1的类型 %s' %type(a1))
+print('a1的类型 %s' %type(a2))
+# 是否为某个类的子类
+print(isinstance(a1,Monster))
+
+
 # user1 = Player('tom', 100, 'war')  # 类的实例化
 # user2 = Player('jerry', 90, 'master')
 # user1.print_role()
