@@ -29,16 +29,20 @@ class Monster():
         self.hp = hp
     def run(self):
         print('移动到某个位置')
+    def whomi(self):
+        print("我是怪物的父类")
 
 class Animals(Monster):
     '普通的怪物'
     def __init__(self, hp=10):
-        self.hp = hp
+        super().__init__(hp)
 
 
 class Boss(Monster):
     'Boss类怪物'
-    pass
+
+    def whomi(self):
+        print("我是怪物我拍谁")
 
 a1 = Monster(200)
 print(a1.hp)
@@ -47,6 +51,10 @@ print(a1.run())
 a2 = Animals()
 print(a2.hp)
 print(a2.run())
+
+a3 = Boss()
+print(a3.hp)
+print(a3.whomi())
 
 
 # user1 = Player('tom', 100, 'war')  # 类的实例化
