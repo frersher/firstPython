@@ -74,3 +74,5 @@ print(isinstance(a1,Monster))
 # # 如果变量用__修饰则为私有的
 # user1.name = 'lis'
 # user1.print_role()
+
+
