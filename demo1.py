@@ -241,3 +241,5 @@ print("当前读取到第一个字符，字符内容是 %s" %file6.read(1))
 #     print(e)
 # finally:
 #     a.close()
+
+# test hello world
