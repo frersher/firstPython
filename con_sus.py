@@ -1,3 +1,4 @@
+# 生产者消费者案例
 from threading import Thread, current_thread
 import time
 import random
